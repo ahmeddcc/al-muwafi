@@ -53,9 +53,9 @@ ob_start();
     <aside class="settings-sidebar glass-card">
         <nav class="settings-nav">
             <?php $isFirst = true; foreach ($allowedTabs as $id => $tab): ?>
-            <button class="nav-item <?= $isFirst ? 'active' : '' ?>" onclick="switchTab('<?= $id ?>', this)" id="nav-<?= $id ?>">
-                <div class="nav-icon"><i class="fas <?= $tab['icon'] ?>"></i></div>
-                <span><?= $tab['label'] ?></span>
+            <button class="nav-item <?= $isFirst ? 'active' : '' ?>" onclick="switchTab('<?= htmlspecialchars($id) ?>', this)" id="nav-<?= htmlspecialchars($id) ?>">
+                <div class="nav-icon"><i class="fas <?= htmlspecialchars($tab['icon']) ?>"></i></div>
+                <span><?= htmlspecialchars($tab['label']) ?></span>
                 <i class="fas fa-chevron-left arrow"></i>
             </button>
             <?php $isFirst = false; endforeach; ?>
