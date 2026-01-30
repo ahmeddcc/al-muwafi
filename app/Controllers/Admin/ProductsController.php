@@ -422,8 +422,9 @@ class ProductsController extends BaseController {
     private function generateProductCode(): string {
         $prefix = 'PRD-';
         do {
-            // توليد كود عشوائي من 6 أحرف/أرقام
-            $random = strtoupper(substr(md5(uniqid(mt_rand(), true)), 0, 8));
+            // توليد كود عشوائي آمن (8 أحرف)
+            // random_bytes is cryptographically secure
+            $random = strtoupper(bin2hex(random_bytes(4)));
             $code = $prefix . $random;
         } while ($this->db->exists('products', 'product_code = :code', ['code' => $code]));
         
