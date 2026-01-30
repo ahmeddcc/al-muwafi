@@ -546,8 +546,13 @@ class SparePartsController extends BaseController {
                         $uploadDir = ROOT_PATH . '/public/storage/uploads/spare-parts/docs/';
                         if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
                         
-                        $filename = uniqid('doc_') . '.' . $ext;
-                        move_uploaded_file($file['tmp_name'], $uploadDir . $filename);
+                        // Sanitize extension and filename to prevent Path Traversal
+                        $safeExt = preg_replace('/[^a-z0-9]/', '', $ext); 
+                        $filename = uniqid('doc_') . '.' . $safeExt;
+                        
+                        // Ensure we are saving to the intended directory
+                        $targetPath = $uploadDir . basename($filename);
+                        move_uploaded_file($file['tmp_name'], $targetPath);
                         $path = 'spare-parts/docs/' . $filename;
                     } else {
                         // معالجة صورة
