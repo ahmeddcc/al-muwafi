@@ -279,8 +279,9 @@ class ImageProcessor {
         imagedestroy($image);
         imagedestroy($newImage);
         
-        // حذف الملف الأصلي فقط إذا تم إنشاء ملف جديد مختلف
-        if ($result && $newPath !== $imagePath && file_exists($newPath)) {
+        // التحقق من أن المسار داخل مجلد الرفع المسموح به
+        $realPath = realpath($imagePath);
+        if ($realPath && strpos($realPath, realpath($this->uploadsPath)) === 0 && $result && $newPath !== $imagePath && file_exists($newPath)) {
             @unlink($imagePath);
         }
         
@@ -677,6 +678,12 @@ class ImageProcessor {
             ? $path 
             : $this->uploadsPath . DIRECTORY_SEPARATOR . $path;
         
+        // التحقق الأمني: منع Path Traversal
+        $realPath = realpath($fullPath);
+        if (!$realPath || strpos($realPath, realpath($this->uploadsPath)) !== 0) {
+            return false;
+        }
+
         $deleted = false;
         
         // حذف الملف الأصلي
@@ -687,15 +694,22 @@ class ImageProcessor {
         // حذف نسخة PNG إذا كانت موجودة (في حالة تحويل الخلفية)
         $pngPath = preg_replace('/\.(jpg|jpeg)$/i', '.png', $fullPath);
         if ($pngPath !== $fullPath && file_exists($pngPath)) {
-            @unlink($pngPath);
-            $deleted = true;
+            // التحقق مرة أخرى من المسار البديل
+            $realPngPath = realpath($pngPath);
+            if ($realPngPath && strpos($realPngPath, realpath($this->uploadsPath)) === 0) {
+                 @unlink($pngPath);
+                 $deleted = true;
+            }
         }
         
         // حذف نسخة JPG إذا كان الملف المحذوف PNG
         $jpgPath = preg_replace('/\.png$/i', '.jpg', $fullPath);
         if ($jpgPath !== $fullPath && file_exists($jpgPath)) {
-            @unlink($jpgPath);
-            $deleted = true;
+             $realJpgPath = realpath($jpgPath);
+             if ($realJpgPath && strpos($realJpgPath, realpath($this->uploadsPath)) === 0) {
+                @unlink($jpgPath);
+                $deleted = true;
+             }
         }
         
         return $deleted;
