@@ -74,11 +74,11 @@ class ErrorLogger {
             $db = Database::getInstance();
             
             $db->insert('error_logs', [
-                'error_type' => $logEntry['type'],
-                'error_message' => $logEntry['message'],
-                'file_name' => $logEntry['file'],
-                'line_number' => $logEntry['line'],
-                'priority' => $logEntry['priority'],
+                'error_type' => strip_tags($logEntry['type']),
+                'error_message' => strip_tags($logEntry['message']),
+                'file_name' => strip_tags($logEntry['file'] ?? ''),
+                'line_number' => (int)($logEntry['line'] ?? 0),
+                'priority' => strip_tags($logEntry['priority']),
             ]);
         } catch (\Exception $e) {
             // تجاهل أخطاء قاعدة البيانات لتجنب الحلقة اللانهائية
