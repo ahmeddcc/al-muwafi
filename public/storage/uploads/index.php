@@ -37,7 +37,7 @@ if ($debug) {
     if (is_dir($dir)) {
         echo "Directory contents:\n";
         foreach (scandir($dir) as $f) {
-            if ($f != '.' && $f != '..') echo "  - $f\n";
+            if ($f != '.' && $f != '..') echo "  - " . htmlspecialchars($f) . "\n";
         }
     }
     exit;
