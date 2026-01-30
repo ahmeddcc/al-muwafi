@@ -163,7 +163,7 @@ class Security {
         $maxRequests = (int) (self::$settings['security_rate_limit_requests'] ?? 100);
         $window = (int) (self::$settings['security_rate_limit_window'] ?? 60);
         
-        $key = 'rate_limit_' . md5($ip);
+        $key = 'rate_limit_' . hash('sha256', $ip);
         $cachePath = (defined('CACHE_PATH') ? CACHE_PATH : dirname(__DIR__, 2) . '/storage/cache');
         $cacheFile = $cachePath . '/' . $key . '.json';
         
