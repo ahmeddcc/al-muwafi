@@ -81,13 +81,11 @@ class Security {
      * إعداد رؤوس الأمان
      */
     private static function setSecurityHeaders(): void {
-        if (!headers_sent()) {
-            header('X-Content-Type-Options: nosniff');
-            header('X-Frame-Options: SAMEORIGIN');
-            header('X-XSS-Protection: 1; mode=block');
-            header('Referrer-Policy: strict-origin-when-cross-origin');
-            header("Content-Security-Policy: frame-ancestors 'self'");
-        }
+        header('X-Content-Type-Options: nosniff');
+        header('X-Frame-Options: SAMEORIGIN');
+        header('X-XSS-Protection: 1; mode=block');
+        header('Referrer-Policy: strict-origin-when-cross-origin');
+        header("Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' data:; frame-ancestors 'self'; img-src 'self' data: blob:");
     }
     
     /**
