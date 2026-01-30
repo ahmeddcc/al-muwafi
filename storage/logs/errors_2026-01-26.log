@@ -1,0 +1,19 @@
+[2026-01-26 13:54:28] [MEDIUM] php_error: Undefined variable $groups في C:\xampp\htdocs\al-muwafi\views\public\product-details.php:958
+[2026-01-26 13:54:28] [MEDIUM] php_error: foreach() argument must be of type array|object, null given في C:\xampp\htdocs\al-muwafi\views\public\product-details.php:958
+[2026-01-26 13:54:28] [MEDIUM] php_error: Undefined variable $groups في C:\xampp\htdocs\al-muwafi\views\public\product-details.php:1126
+[2026-01-26 13:54:28] [MEDIUM] php_error: foreach() argument must be of type array|object, null given في C:\xampp\htdocs\al-muwafi\views\public\product-details.php:1126
+[2026-01-26 19:33:08] [CRITICAL] database_connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it في C:\xampp\htdocs\al-muwafi\app\Services\Database.php:65
+[2026-01-26 19:33:12] [CRITICAL] database_connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it في C:\xampp\htdocs\al-muwafi\app\Services\Database.php:65
+[2026-01-26 19:33:16] [CRITICAL] database_connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it في C:\xampp\htdocs\al-muwafi\app\Services\Database.php:65
+[2026-01-26 19:33:20] [CRITICAL] database_connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it في C:\xampp\htdocs\al-muwafi\app\Services\Database.php:65
+[2026-01-26 19:33:24] [CRITICAL] database_connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it في C:\xampp\htdocs\al-muwafi\app\Services\Database.php:65
+[2026-01-26 19:33:24] [CRITICAL] database_connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it في C:\xampp\htdocs\al-muwafi\app\Services\Database.php:65
+[2026-01-26 19:33:26] [CRITICAL] database_connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it في C:\xampp\htdocs\al-muwafi\app\Services\Database.php:65
+[2026-01-26 23:23:27] [MEDIUM] php_error: include(C:\xampp\htdocs\al-muwafi/views/layouts/public_navbar.php): Failed to open stream: No such file or directory في C:\xampp\htdocs\al-muwafi\views\public\about.php:272
+[2026-01-26 23:23:27] [MEDIUM] php_error: include(): Failed opening 'C:\xampp\htdocs\al-muwafi/views/layouts/public_navbar.php' for inclusion (include_path='C:\xampp\php\PEAR') في C:\xampp\htdocs\al-muwafi\views\public\about.php:272
+[2026-01-26 23:23:27] [MEDIUM] php_error: include(C:\xampp\htdocs\al-muwafi/views/layouts/public_footer.php): Failed to open stream: No such file or directory في C:\xampp\htdocs\al-muwafi\views\public\about.php:394
+[2026-01-26 23:23:27] [MEDIUM] php_error: include(): Failed opening 'C:\xampp\htdocs\al-muwafi/views/layouts/public_footer.php' for inclusion (include_path='C:\xampp\php\PEAR') في C:\xampp\htdocs\al-muwafi\views\public\about.php:394
+[2026-01-26 23:25:00] [MEDIUM] php_error: include(C:\xampp\htdocs\al-muwafi/views/layouts/public_navbar.php): Failed to open stream: No such file or directory في C:\xampp\htdocs\al-muwafi\views\public\about.php:272
+[2026-01-26 23:25:00] [MEDIUM] php_error: include(): Failed opening 'C:\xampp\htdocs\al-muwafi/views/layouts/public_navbar.php' for inclusion (include_path='C:\xampp\php\PEAR') في C:\xampp\htdocs\al-muwafi\views\public\about.php:272
+[2026-01-26 23:25:00] [MEDIUM] php_error: include(C:\xampp\htdocs\al-muwafi/views/layouts/public_footer.php): Failed to open stream: No such file or directory في C:\xampp\htdocs\al-muwafi\views\public\about.php:394
+[2026-01-26 23:25:00] [MEDIUM] php_error: include(): Failed opening 'C:\xampp\htdocs\al-muwafi/views/layouts/public_footer.php' for inclusion (include_path='C:\xampp\php\PEAR') في C:\xampp\htdocs\al-muwafi\views\public\about.php:394

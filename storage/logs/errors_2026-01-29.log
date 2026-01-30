@@ -1,0 +1,12 @@
+[2026-01-29 02:03:25] [HIGH] database_query: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'TK2601290002' for key 'ticket_number' في C:\xampp\htdocs\al-muwafi\app\Services\Database.php:86
+[2026-01-29 02:16:19] [CRITICAL] routing_error: Call to undefined method App\Services\Database::execute() في C:\xampp\htdocs\al-muwafi\app\Models\Ticket.php:158
+[2026-01-29 02:44:24] [HIGH] database_query: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'code' in 'field list' في C:\xampp\htdocs\al-muwafi\app\Services\Database.php:86
+[2026-01-29 02:44:25] [CRITICAL] routing_error: خطأ في تنفيذ الاستعلام في C:\xampp\htdocs\al-muwafi\app\Services\Database.php:87
+[2026-01-29 02:47:43] [HIGH] database_query: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'title' in 'field list' في C:\xampp\htdocs\al-muwafi\app\Services\Database.php:86
+[2026-01-29 02:47:45] [CRITICAL] routing_error: خطأ في تنفيذ الاستعلام في C:\xampp\htdocs\al-muwafi\app\Services\Database.php:87
+[2026-01-29 02:49:42] [MEDIUM] php_error: Undefined array key "title" في C:\xampp\htdocs\al-muwafi\views\public\product-details.php:894
+[2026-01-29 02:49:42] [MEDIUM] php_error: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated في C:\xampp\htdocs\al-muwafi\views\public\product-details.php:894
+[2026-01-29 02:49:42] [MEDIUM] php_error: Undefined array key "error_code" في C:\xampp\htdocs\al-muwafi\views\public\product-details.php:895
+[2026-01-29 02:50:46] [MEDIUM] php_error: Undefined array key "title" في C:\xampp\htdocs\al-muwafi\views\public\product-details.php:894
+[2026-01-29 02:50:46] [MEDIUM] php_error: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated في C:\xampp\htdocs\al-muwafi\views\public\product-details.php:894
+[2026-01-29 02:50:46] [MEDIUM] php_error: Undefined array key "error_code" في C:\xampp\htdocs\al-muwafi\views\public\product-details.php:895

@@ -1,0 +1,4 @@
+[2026-01-23 15:02:35] [CRITICAL] exception: Unsupported operand types: string - int في C:\xampp\htdocs\al-muwafi\views\admin\logs\index.php:105
+[2026-01-23 15:02:43] [CRITICAL] exception: Call to undefined method App\Services\Database::execute() في C:\xampp\htdocs\al-muwafi\app\Controllers\Admin\LogsController.php:70
+[2026-01-23 15:04:11] [CRITICAL] exception: Unsupported operand types: string - int في C:\xampp\htdocs\al-muwafi\views\admin\logs\index.php:105
+[2026-01-23 15:12:03] [CRITICAL] routing_error: Unsupported operand types: string - int في C:\xampp\htdocs\al-muwafi\views\admin\logs\index.php:105

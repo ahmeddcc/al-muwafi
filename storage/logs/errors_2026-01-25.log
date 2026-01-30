@@ -1,0 +1,9 @@
+[2026-01-25 19:35:47] [MEDIUM] php_error: Undefined variable $companyName في C:\xampp\htdocs\al-muwafi\views\public\products.php:16
+[2026-01-25 19:35:47] [MEDIUM] php_error: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated في C:\xampp\htdocs\al-muwafi\views\public\products.php:16
+[2026-01-25 19:35:47] [MEDIUM] php_error: Undefined variable $companyName في C:\xampp\htdocs\al-muwafi\views\public\products.php:312
+[2026-01-25 19:35:47] [MEDIUM] php_error: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated في C:\xampp\htdocs\al-muwafi\views\public\products.php:312
+[2026-01-25 19:35:47] [MEDIUM] php_error: Undefined variable $db في C:\xampp\htdocs\al-muwafi\views\public\products.php:320
+[2026-01-25 19:35:47] [CRITICAL] routing_error: Call to a member function fetchAll() on null في C:\xampp\htdocs\al-muwafi\views\public\products.php:320
+[2026-01-25 19:57:41] [CRITICAL] routing_error: Call to undefined method App\Services\ImageProcessor::delete() في C:\xampp\htdocs\al-muwafi\app\Controllers\Admin\ProductsController.php:207
+[2026-01-25 19:58:26] [CRITICAL] routing_error: Call to undefined method App\Services\ImageProcessor::delete() في C:\xampp\htdocs\al-muwafi\app\Controllers\Admin\ProductsController.php:207
+[2026-01-25 19:58:28] [CRITICAL] routing_error: Call to undefined method App\Services\ImageProcessor::delete() في C:\xampp\htdocs\al-muwafi\app\Controllers\Admin\ProductsController.php:207
